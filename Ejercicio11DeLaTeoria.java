@@ -32,18 +32,23 @@ public class Ejercicio11DeLaTeoria {
         for (int i=1;i<=palabra.length();i++){
             switch(palabra.substring((i-1), i).toLowerCase()){
                 case "a":
+                case "á":
                     palabra=palabra.substring(0, (i-1))+"@"+palabra.substring(i);
                     break;
                 case "e":
+                case "é":
                     palabra=palabra.substring(0, (i-1))+"#"+palabra.substring(i);
                     break;
                 case "i":
+                case "í":
                     palabra=palabra.substring(0, (i-1))+"$"+palabra.substring(i);
                     break;
                 case "o":
+                case "ó":
                     palabra=palabra.substring(0, (i-1))+"%"+palabra.substring(i);
                     break;
                 case "u":
+                case "ú":
                     palabra=palabra.substring(0, (i-1))+"*"+palabra.substring(i);
                     break;
                     
