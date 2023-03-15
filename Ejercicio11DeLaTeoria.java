@@ -26,11 +26,20 @@ public class Ejercicio11DeLaTeoria {
         System.out.println("Ingrese la palabra terminada en un punto: ");
         palabra=leer.next();
         
+        //llamamos a la funcion le damos el parametro y cuando nos devuelve el 
+        //valor se imprime por pantalla
         System.out.println(transformacion(palabra));
+        
+        //se cierra el Objeto Scanner
+        leer.close();
     }
     public static String transformacion(String palabra){
+        //usamos el bucle for para evaluar letra por letra
         for (int i=1;i<=palabra.length();i++){
+        /* indicamos con el metodo substring(a,b) desde a hasta b seleccionar la letra en esa pocision 
+        y luego lo converitmos a minúsculas para asegurarnos de todas las posibles mayúsculas ingresadas */
             switch(palabra.substring((i-1), i).toLowerCase()){
+                //con la "a" y "á" tendran la misma sentencia
                 case "a":
                 case "á":
                     palabra=palabra.substring(0, (i-1))+"@"+palabra.substring(i);
@@ -63,7 +72,7 @@ public class Ejercicio11DeLaTeoria {
                     "palabra.substring(0, i-1)" - esta parte de la línea toma una subcadena de "palabra" desde el principio hasta 
                     el índice justo antes del índice donde se encontró la letra "a". Si "i" es 1, esto devuelve una cadena vacía. 
                     Si "i" es mayor a 1, esto devuelve una subcadena de "palabra" desde el principio hasta el carácter justo antes 
-                    de la primera "a" encontrada.
+                    de la primera "a" encontrada o de la vocal en cuestion.
                     
                     "@" - esta parte de la línea simplemente es el carácter "@" que reemplazará la letra "a".
                     
@@ -79,6 +88,7 @@ public class Ejercicio11DeLaTeoria {
                     
             }
         }
+        // se devuelve la palabra ya modificada
         return (palabra);
     }
     
