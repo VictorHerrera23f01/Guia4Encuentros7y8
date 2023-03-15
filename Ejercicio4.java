@@ -20,11 +20,16 @@ public class Ejercicio4 {
         System.out.print("Ingrese un numero a evaluar: ");
         num=leer.nextInt();
         
+        //al ser un tipo de valor booleano(logico) el que devuelve la funcion
+        //podemos gozar de usarla en un condicional si es verdadero se ejecutan
+        //las sentencias por el si(if) y si es falso las sentencias por el no (else)
         if(numeroPrimo(num)){
             System.out.println("El numero es primo");
         }else{
             System.out.println("No es primo");
         }
+        //no nos olvidemos de cerrar el objeto Scanner
+        leer.close();
     }
     public static boolean numeroPrimo(int numero){
         for(int i=2; i<numero; i++){
@@ -32,7 +37,7 @@ public class Ejercicio4 {
             1 y si mismo, por eso pasamos por alto el primer valor de i y el 
             ultimo porque queremos encontrar un divisor que no sea 1 y el mismo numero */
             if(numero%i==0){
-                //si encuntra un divisor entre 1 y el numero ingresado no es primo
+                //si encuentra un divisor entre 1 y el numero ingresado no es primo
                 return false;
             }
         }

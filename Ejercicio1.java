@@ -17,9 +17,12 @@ public class Ejercicio1 {
         System.out.print("Ingrese el Segundo numero: ");
         num2=leer.nextInt();
         
+        //llamamos al subprograma menu que no devuelve ningun valor solo se ejecuta
+        //lo que tiene dentro y luego leemos la opcion por teclado
         menu();
         opc=leer.nextInt();
         
+        //segun halla sido su opción elegida sera su sentencia a imprimir por pantalla
         switch(opc){
             case 1:
                 System.out.println("La suma es de: "+sumar(num1,num2));
@@ -31,6 +34,7 @@ public class Ejercicio1 {
                 System.out.println("El producto es de: "+producto(num1,num2));
                 break;
             case 4:
+                //nos aseguramos que la division sea coherente
                 if(num2!=0){
                     System.out.println("El cociente es de: "+cociente(num1,num2));
                     break;
@@ -38,7 +42,8 @@ public class Ejercicio1 {
                     System.out.println("No se puede dividir entre cero!!");
                 }
         }
-        
+        //no nos olvidemos de cerrar el objeto Scanner
+        leer.close();
     }    
     public static void menu(){
         System.out.println("Menu");

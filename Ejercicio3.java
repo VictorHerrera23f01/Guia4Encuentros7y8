@@ -23,17 +23,24 @@ public class Ejercicio3 {
         
         System.out.print("Ingrese la cantidad de EUROS: ");
         Monto=leer.nextFloat();
+        //llamamos al menu que no devuelve ningun valor solo se ejecuta
         menu();
         System.out.print("\nIngrese el nombre de la Divisa a cambiar: ");
         Divisa=leer.next();
-        
+        //leemos el nombre de la divisa que es vital para el siguiente bloque de codigo
+        //llamamos a la funcion para el cambio de divisas
         cambioDeDivisas(Monto,Divisa);
+        //no nos olvidemos de cerrar el objeto Scanner
+        leer.close();
     }
     public static void cambioDeDivisas(float Euros,String Moneda){
         float Cambio;
         
+        //segun halla sido la divisa tomada por teclado seran sus sentencias
         switch(Moneda){
             case "Libra Esterlina":
+                //nos aseguramos de los decimales con la clase Math
+                //luego imprimimos por pantalla la sentencia correspondiente
                 Cambio=Math.round((Euros/0.86)*100.0f)/100.0f;
                 System.out.println("El cambio en Libras es de: "+Cambio);
                 System.out.println(Euros+" Euros = "+Cambio+" Libras");
