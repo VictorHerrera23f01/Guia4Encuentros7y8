@@ -32,6 +32,9 @@ public class Ejercicio4 {
         leer.close();
     }
     public static boolean numeroPrimo(int numero){
+        if(numero==1){
+            return false;
+        }
         for(int i=2; i<numero; i++){
             /* De esta manera nos aseguramos que el numero solo tenga el divisor
             1 y si mismo, por eso pasamos por alto el primer valor de i y el 
